@@ -1,0 +1,162 @@
+
+
+\newcommand{\paa}{Pa\ensuremath{\alpha}}
+\newcommand{\brg}{Br\ensuremath{\gamma}}
+\newcommand{\msun}{\ensuremath{M_{\odot}}\xspace}			%  Msun
+\newcommand{\mdot}{\ensuremath{\dot{M}}\xspace}
+\newcommand{\lsun}{\ensuremath{L_{\odot}}\xspace}			%  Lsun
+\newcommand{\rsun}{\ensuremath{R_{\odot}}\xspace}			%  Rsun
+\newcommand{\lbol}{\ensuremath{L_{\mathrm{bol}}\xspace}}	%  Lbol
+\newcommand{\ks}{K\ensuremath{_{\mathrm{s}}}}		%  Ks
+\newcommand{\hh}{\ensuremath{\textrm{H}_{2}}\xspace}			%  H2
+\newcommand{\dens}{\ensuremath{n(\hh) [\percc]}\xspace}
+\newcommand{\formaldehyde}{\ensuremath{\textrm{H}_2\textrm{CO}}\xspace}
+\newcommand{\formamide}{\ensuremath{\textrm{NH}_2\textrm{CHO}}\xspace}
+\newcommand{\formaldehydeIso}{\ensuremath{\textrm{H}_2~^{13}\textrm{CO}}\xspace}
+\newcommand{\methanol}{\ensuremath{\textrm{CH}_3\textrm{OH}}\xspace}
+\newcommand{\methane}{\ensuremath{\textrm{CH}_4}\xspace}
+\newcommand{\ortho}{\ensuremath{\textrm{o-H}_2\textrm{CO}}\xspace}
+\newcommand{\para}{\ensuremath{\textrm{p-H}_2\textrm{CO}}\xspace}
+\newcommand{\oneone}{\ensuremath{1_{1,0}-1_{1,1}}\xspace}
+\newcommand{\twotwo}{\ensuremath{2_{1,1}-2_{1,2}}\xspace}
+\newcommand{\threethree}{\ensuremath{3_{1,2}-3_{1,3}}\xspace}
+\newcommand{\threeohthree}{\ensuremath{3_{0,3}-2_{0,2}}\xspace}
+\newcommand{\threetwotwo}{\ensuremath{3_{2,2}-2_{2,1}}\xspace}
+\newcommand{\threetwoone}{\ensuremath{3_{2,1}-2_{2,0}}\xspace}
+\newcommand{\fourtwotwo}{\ensuremath{4_{2,2}-3_{1,2}}\xspace} % CH3OH 218.4 GHz
+\newcommand{\methylcyanide}{\ensuremath{\textrm{CH}_{3}\textrm{CN}}\xspace}
+\newcommand{\ketene}{\ensuremath{\textrm{H}_{2}\textrm{CCO}}\xspace}
+\newcommand{\ethylcyanide}{\ensuremath{\textrm{CH}_3\textrm{CH}_2\textrm{CN}}\xspace}
+\newcommand{\cyanoacetylene}{\ensuremath{\textrm{HC}_{3}\textrm{N}}\xspace}
+\newcommand{\methylformate}{\ensuremath{\textrm{CH}_{3}\textrm{OCHO}}\xspace}
+\newcommand{\dimethylether}{\ensuremath{\textrm{CH}_{3}\textrm{OCH}_{3}}\xspace}
+\newcommand{\gaucheethanol}{\ensuremath{\textrm{g-CH}_3\textrm{CH}_2\textrm{OH}}\xspace}
+\newcommand{\acetone}{\ensuremath{\left[\textrm{CH}_{3}\right]_2\textrm{CO}}\xspace}
+\newcommand{\methyleneamidogen}{\ensuremath{\textrm{H}_{2}\textrm{CN}}\xspace}
+\newcommand{\Rone}{\ensuremath{\para~S_{\nu}(\threetwoone) / S_{\nu}(\threeohthree)}\xspace}
+\newcommand{\Rtwo}{\ensuremath{\para~S_{\nu}(\threetwotwo) / S_{\nu}(\threetwoone)}\xspace}
+\newcommand{\JKaKc}{\ensuremath{J_{K_a K_c}}}
+\newcommand{\water}{H$_{2}$O\xspace}		%  H2O
+\newcommand{\feii}{\ion{Fe}{ii}\xspace}		%  FeII
+
+\newcommand{\uchii}{\ion{UCH}{ii}\xspace}
+\newcommand{\UCHII}{\ion{UCH}{ii}\xspace}
+\newcommand{\hchii}{\ion{HCH}{ii}\xspace}
+\newcommand{\HCHII}{\ion{HCH}{ii}\xspace}
+\newcommand{\hii}{\ion{H}{ii}\xspace}
+
+\newcommand{\hi}{H~{\sc i}\xspace}
+\newcommand{\Hii}{\hii}
+\newcommand{\HII}{\hii}
+\newcommand{\Xform}{\ensuremath{X_{\formaldehyde}}}
+\newcommand{\kms}{\textrm{km~s}\ensuremath{^{-1}}\xspace}	%  km s-1
+\newcommand{\nsample}{456\xspace}
+\newcommand{\CFR}{5\xspace} % nMPC / 0.25 / 2 (6 for W51 once, 8 for W51 twice) REFEDIT: With f_observed=0.3, becomes 3/2./0.3 = 5
+\newcommand{\permyr}{\ensuremath{\mathrm{Myr}^{-1}}\xspace}
+\newcommand{\pers}{\ensuremath{\mathrm{s}^{-1}}\xspace}
+\newcommand{\perspc}{\ensuremath{\mathrm{pc}^{-2}}\xspace}
+\newcommand{\tsuplim}{0.5\xspace} % upper limit on starless timescale
+\newcommand{\ncandidates}{18\xspace}
+\newcommand{\mindist}{8.7\xspace}
+\newcommand{\rcluster}{2.5\xspace}
+\newcommand{\ncomplete}{13\xspace}
+\newcommand{\middistcut}{13.0\xspace}
+\newcommand{\nMPC}{3\xspace} % only count W51 once.  W51, W49, G010
+\newcommand{\obsfrac}{30}
+\newcommand{\nMPCtot}{10\xspace} % = nmpc / obsfrac
+\newcommand{\nMPCtoterr}{6\xspace} % = sqrt(nmpc) / obsfrac
+\newcommand{\plaw}{2.1\xspace}
+\newcommand{\plawerr}{0.3\xspace}
+\newcommand{\mmin}{\ensuremath{10^4~\msun}\xspace}
+%\newcommand{\perkmspc}{\textrm{per~km~s}\ensuremath{^{-1}}\textrm{pc}\ensuremath{^{-1}}\xspace}	%  km s-1 pc-1
+\newcommand{\kmspc}{\textrm{km~s}\ensuremath{^{-1}}\textrm{pc}\ensuremath{^{-1}}\xspace}	%  km s-1 pc-1
+\newcommand{\sqcm}{cm$^{2}$\xspace}		%  cm^2
+\newcommand{\percc}{\ensuremath{\textrm{cm}^{-3}}\xspace}
+\newcommand{\perpc}{\ensuremath{\textrm{pc}^{-1}}\xspace}
+\newcommand{\persc}{\ensuremath{\textrm{cm}^{-2}}\xspace}
+\newcommand{\persr}{\ensuremath{\textrm{sr}^{-1}}\xspace}
+\newcommand{\peryr}{\ensuremath{\textrm{yr}^{-1}}\xspace}
+\newcommand{\perkmspc}{\textrm{km~s}\ensuremath{^{-1}}\textrm{pc}\ensuremath{^{-1}}\xspace}	%  km s-1 pc-1
+\newcommand{\perkms}{\textrm{per~km~s}\ensuremath{^{-1}}\xspace}	%  km s-1 
+\newcommand{\um}{\ensuremath{\mu \textrm{m}}\xspace}    % micron
+\newcommand{\microjy}{\ensuremath{\mu\textrm{Jy}}\xspace}    % micron
+\newcommand{\microJy}{\ensuremath{\mu\textrm{Jy}}\xspace}    % micron
+\newcommand{\mum}{\um}
+\newcommand{\htwo}{\ensuremath{\textrm{H}_2}}
+\newcommand{\Htwo}{\ensuremath{\textrm{H}_2}}
+\newcommand{\HtwoO}{\ensuremath{\textrm{H}_2\textrm{O}}}
+\newcommand{\htwoo}{\ensuremath{\textrm{H}_2\textrm{O}}}
+\newcommand{\ha}{\ensuremath{\textrm{H}\alpha}}
+\newcommand{\hb}{\ensuremath{\textrm{H}\beta}}
+\newcommand{\so}{SO~\ensuremath{5_6-4_5}\xspace}
+\newcommand{\SO}{SO~\ensuremath{1_2-1_1}\xspace}
+\newcommand{\ammonia}{NH\ensuremath{_3}\xspace}
+\newcommand{\twelveco}{\ensuremath{^{12}\textrm{CO}}\xspace}
+\newcommand{\thirteenco}{\ensuremath{^{13}\textrm{CO}}\xspace}
+\newcommand{\ceighteeno}{\ensuremath{\textrm{C}^{18}\textrm{O}}\xspace}
+\def\ee#1{\ensuremath{\times10^{#1}}}
+\newcommand{\degrees}{\ensuremath{^{\circ}}}
+% can't have \degree because I'm getting a degree...
+\newcommand{\lowirac}{800}
+\newcommand{\highirac}{8000}
+\newcommand{\lowmips}{600}
+\newcommand{\highmips}{5000}
+\newcommand{\perbeam}{\ensuremath{\textrm{beam}^{-1}}\xspace}
+\newcommand{\ds}{\ensuremath{\textrm{d}s}}
+\newcommand{\dnu}{\ensuremath{\textrm{d}\nu}}
+\newcommand{\dv}{\ensuremath{\textrm{d}v}}
+\def\secref#1{Section \ref{#1}}
+\def\eqref#1{Equation \ref{#1}}
+\def\facility#1{#1}
+%\newcommand{\arcmin}{'}
+
+\newcommand{\necluster}{Sh~2-233IR~NE}
+\newcommand{\swcluster}{Sh~2-233IR~SW}
+\newcommand{\region}{IRAS 05358}
+
+\newcommand{\nwfive}{40}
+\newcommand{\nouter}{15}
+
+\newcommand{\vone}{{\rm v}1.0\xspace}
+\newcommand{\vtwo}{{\rm v}2.0\xspace}
+\newcommand\mjysr{\ensuremath{{\rm MJy~sr}^{-1}}}
+\newcommand\jybm{\ensuremath{{\rm Jy~bm}^{-1}}}
+\newcommand\nbolocat{8552\xspace}
+\newcommand\nbolocatnew{548\xspace}
+\newcommand\nbolocatnonew{8004\xspace} % = nbolocat-nbolocatnew
+%\renewcommand\arcdeg{\mbox{$^\circ$}\xspace} 
+%\renewcommand\arcmin{\mbox{$^\prime$}\xspace} 
+%\renewcommand\arcsec{\mbox{$^{\prime\prime}$}\xspace} 
+
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\okinfinal}[1]{{#1}}
+%% only needed if not aastex
+%\newcommand{\keywords}[1]{}
+%\newcommand{\email}[1]{}
+%\newcommand{\affil}[1]{}
+
+
+%aastex hack
+%\newcommand\arcdeg{\mbox{$^\circ$}}%
+%\newcommand\arcmin{\mbox{$^\prime$}\xspace}%
+%\newcommand\arcsec{\mbox{$^{\prime\prime}$}\xspace}%
+
+
+% https://tex.stackexchange.com/a/687778/8546
+\usepackage{tikz}
+\usetikzlibrary{calc,tikzmark} 
+\newlength{\imageheight}
+%\settoheight{\imageheight}{% measure the image height
+%    \includegraphics[width=4cm]{example-image} % your image <<<<<<<<<<<<<<<<<
+%}
+
+%\newcommand{\FontLabel}{\sffamily\bfseries\large}% set the font of the labels <<<<<<<<
+
+%\newcommand{\InsertLabels}[2]{% 
+%  \begin{tikzpicture}[overlay,remember picture]
+%        \node[font=\FontLabel] at ( $ (pic cs:a) +(#1,\imageheight-#2) $ ){a};% 
+%        \node[font=\FontLabel] at ( $ (pic cs:b) +(#1,\imageheight-#2) $ ){b};% 
+%        \node[font=\FontLabel] at ( $ (pic cs:c) +(#1,\imageheight-#2) $ ){c};% 
+%        \node[font=\FontLabel] at ( $ (pic cs:d) +(#1,\imageheight-#2) $ ){d};% 
+%    \end{tikzpicture}   
+%}

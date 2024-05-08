@@ -1,0 +1,18 @@
+We thank the referee for the final comments.  We have addressed them all.
+
+We also caught a typo throughout the paper: The Brick has historically been referred to as G0.253+0.016, not G0.253+0.015.  We correct this throughout.
+
+> 1. The equation at lines 257-258 needs an equation number. Also, more to the point, using the filter designations to represent surface brightness in this equation, but representing magnitudes elsewhere, overloads these poor designations. Better to just introduce a surface brightness symbol, even if it only appears in this equation. E.g., "SB(F410M)" would sidestep the overload problem.
+
+We've modified this equation as suggested.
+
+> 2. At line 270, a scaling factor is computed from the square of the ratio of the central wavelengths of two filters. I would have expected scaling by the linear ratio of filter bandwidths, and others might also. Can this be clarified, as the filter bandwidths are never presented (though they could be added to Table 1)?
+
+We clarify that this is assuming stars are blackbodies and that the 4 micron band is on the Rayleigh-Jeans tail for all.
+
+> 3. In lines 439 to 441, use of left arrows is confusing, as it implies action from right to left. Better to just swap each index number and use right arrows. The resulting level transition actions are then clear and standard.
+
+We have consulted with chemists and several other astronomers about this.  There does not appear to be a widely-adopted, established convention here.  Reversing the order of the energy levels is confusing, since the delta-v = 1 transitions split into delta-J = +1 and delta-J = -1, so the ordering of the upper and lower rotational states is critical for specifying the wavelength of the transition.  However, simply writing out the transition without an arrow (e.g., v=1-0 J=0-1) can imply, at a glance, that we are talking about an emission process, which we're not.  We prefer to keep the notation as is; the implied action right to left is in this case intentional and we believe this approach is clearer than a no-arrow or a reversed-order approach.  We have added a brief note in the text about this choice.
+
+
+(note that bolding in this reply still includes the original bolded edits)

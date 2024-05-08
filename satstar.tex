@@ -1,0 +1,24 @@
+\subsection{Saturated star fitting and removal}
+\label{sec:satstar}
+\textcolor{red}{We might remove this from Paper I because we don't need it for ice stuff.}
+We attempted to remove the PSF around saturated stars, and measure these stars' brightness, by selecting on saturated pixels and fitting PSF models.
+We used the \texttt{webbpsf} package to obtain models for each module.
+We then used \texttt{photutils} for photometry.
+The saturated star fitting is implemented in the script \texttt{saturated\_star\_finding.py} in the analysis repository\footnote{\url{https://github.com/keflavich/brick-jwst-2221}}.
+
+To identify the saturated stars, we created a custom star finder.
+The finder treats all pixels with value equal to zero as `saturated'.
+It excludes pixels within a specified threshold (default 50) of the edge of the image.
+For each star, it reports the center as the centroid of the saturated pixels after assigning each pixel a value of 1.
+It excludes any objects with a contiguous number of saturated pixels above a specified threshold (default 100) assuming such regions are not stars.
+Finally, it checks if the object is star-like by examining the surrounding pixels and checking that the total value of the pixels within 3 pixels in any direction of the saturated pixels is $>500$ MJy/sr.
+This last check should hold for any saturated stars, but it will reject pixels that are zero because they were never covered by a `good' pixel.
+Optionally, this check will also verify that the pixels within 2 pixels of the saturated center are brighter than those further than 2 but within 4 pixels; this checks that the region around the saturated pixels is still star-like.
+
+The saturated stars are then iteratively removed.
+We remove the most saturated stars first, followed by those with progressively fewer pixels.
+This iterative approach is done because the saturated stars require very large PSF footprints and therefore are very slow;
+the most saturated stars can affect regions $>100$ pixels away from the saturated pixels.
+In each iteration, we use photutils' \texttt{BasicPSFPhotometry} with a group maker \texttt{DAOGroup} using a separation of 8 pixels.
+In each iteration, we subtract the best-fit PSF and save the resulting image.
+The final image is then used for further photometry.

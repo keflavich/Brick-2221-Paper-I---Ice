@@ -1,0 +1,1476 @@
+We thank the referee for a helpful and detailed report.  The assistance with conventions was particularly useful, and we appreciate the referee's attention to detail.
+
+In the reply below, we address the referee's comments.  We have addressed the major comments and several of the PDF annotations directly, but many of the PDF annotations we address in groups and do not individually acknowledge here.
+
+We have bolded all additions.
+
+
+> I have read and carefully considered the manuscript entitled, "CO absorption in the Galactic Center cloud G0.253+0.015," authored by Ginsburg et al.
+> 
+> The astrophysical science presented in the manuscript is of high quality and of current interest. The arguments made and modeling presented well support the findings presented. I have no doubt that the eventual publication of this work will find broad readership and appreciation.
+> 
+> However, the text, and especially the figures, are not up to the quality standards that must be met for publication in the Astrophysical Journal. I recommend that the authors closely consider the major concerns raised below as well as the detailed annotations I have made on the PDF version of their manuscript.
+> 
+> Note that major reworking of the paper order and logic are not required - attention to careful editing and adjusting many of the figures will suffice.
+> 
+> I am willing to review a revised manuscript.
+> 
+> Major concerns:
+> 
+> 1) Tense and voice. Both wander throughout the manuscript and so get in the way of smooth reading. Pick a tense and voice and adhere to them throughout.
+
+We have revised all instances of present-tense first-person language we found.  A further proofread by the editors may yet reveal omissions.
+
+> 2) Color nomenclature matters. Colors are variously called out as F466N-F410M, F410M-F466N, F466N/F410M, and [F410M]-[F466M]. Pick a nomenclature (preferably a conventional one) and stick to it throughout. Especially important is to present the bluer filter first in the subtraction, deviations of which were not caught in the author proofreading.
+
+We have adopted magnitude difference as our color nomenclature, and now hold to the convention of shorter wavelength first.
+
+> 3) "Blueing" as an introduced term should be eschewed. In its usage here, it is NOT on par with reddening and only introduces confusion for less-than-expert readers. Cute, but more problematic than needed. Better to describe how particular colors (involving the F466N filter fluxes or magnitudes) exhibit "deficits" relative to what would be expected for a similar wavelength filter that doesn't overlap major spectral features.
+
+We have replaced blueing throughout the text, but we're a bit blue about it.
+
+> Related to this, but a bit more subtle, is the nature of the reddening vector shown in Figure 4c (bottom right), supposedly computed from CT06. This isn't accurate, as CT06 didn't consider spectral features of CO ice and gas appearing in narrow band filters. It is more accurate to state that absent the presence of the ice and gas spectral features, the Av vector shown would represent the expected broadband reddening. [In looking over CT06, I can't understand why this reference was chosen for the extinction curve calculations, as all the data and fits shortward of 8um are in the Indebetouw+05 and Lutz99 references. Why use CT06?]
+
+Indeed, this is the point of showing that vector: we are comparing a dust-extinction-produced reddening vector to the data.
+We have clarified this point in the figure caption.
+
+We added some explanation of the choice of CT06: it is implemented in Karl Gordon's dust extinction package and provides a new fit to the referenced data.  We now cite the original data as well.
+
+> 4) Figure 5 seems to be presented overly late in the manuscript, as some of the discussion about what is sensed through the different JWST filters could be better informed by the figure appearing earlier. This reordering isn't required, but doing so could boost readability and readership. [Do consider inverting the absorption lines, ala Figure 12 in Appendix B - to increase clarity {fewer features plotted over each other} and avoid reader confusion.]
+
+We have moved this figure up slightly.  Because it is fully described later, we present it as a visual summary of the physical explanation for the F466N deficit.
+We have modified the figure significantly to clarify and highlight salient points.  
+
+> 5) Figures - there are numerous issues with the figures, as currently presented. I separate these into two aspects: (A) basic considerations and (B) accessibility.
+> 
+> A) All multi-panel figures: Each panel should be identified within the panel with a (normally capital) letter. Each figure caption should refer to each of the panel identifier letters and the position of the panel on the page. In many places in the text, Figure panels are referred to (e.g., line 339 refers to "Figure 5b" but Figure 5 contains no such designation in either the presented figure panel or in the figure caption. [Note that a couple of the Figure captions call out "left-right" panels when they are instead presented "top-bottom" - closer copyediting would have avoided this error.]
+
+We have added the subplot labels to multipaneled figures.
+
+> Tick marks are normally expected to project INTO the plotted box, not point outside the box to the numerical labels. [Also consider using higher quality fonts in figures - the uniform default nature of the presented fonts and line styles is not in keeping with the high quality of the science being presented.]
+
+Outward facing ticks are matplotlib's default; outward ticks are recommended by many style guides (see discussion at https://github.com/matplotlib/matplotlib/issues/4502/).  Particularly for Figures 1, 2, and 6, inward ticks would be hard to see or would obscure data.  For the other figures, the tick direction does not cause any clear harm.
+
+We have increased figure resolution or switched to vector graphics for the plots.
+
+> Figure 1: has neither directional labels nor angular scales. Neither the text nor the caption explains how the Figure was created (e.g., which filter-images mapped into which color planes). No color lookup table is presented to help the reader interpret the color meanings in the image.
+
+We have changed and clarified the color scheme and added axis labels.
+
+> Figure 2: has neither directional labels nor angular scales - the latter are especially needed for the inserts. This Figure receives only passing reference in the text. Maybe just save it for the press release intended?
+
+We removed this figure.  We will indeed issue a press release and include it.
+
+> B) Accessibility. For individuals who have difficulty distinguishing colors, the use of color as the ONLY way to identify different curves makes those plots unusable. Please examine Figure 8A (top) as a reader having color vision deficiency (CVD) might. The curves merge into each other and are indistinguishable. Instead, there are multiple strategies that can, and should, be employed to convey the information to all readers. These include careful selection of line thicknesses and line styles (dotted, dashed, etc), and when symbols are used, symbol types and sizes (along with thicknesses). There are some excellent computer tools that allow viewing your figures as they would be seen by readers with various types of CVD. Using these tools to inform how best to tweak the colors you do elect to use can help all readers grasp your meanings.
+
+We thank the referee for catching these oversights.  We have now added line styles and/or direct labels to each figure to ensure that all strokes are distinguishable.  
+
+> Good figure design also avoids hiding or overlapping key information. Again, referring to Figure 8A, if the filter transmissions were linked to the right-hand Y-axis with a somewhat different amplitude, the filter curve heights could be chosen so as to not overlap the critical model curves at their apices. Legends should be clear and useful - they should not occult any curves in the plot. (units in legend constants are better than no units, but that can be explained in the captions.) Axis numerical and text labels should not appear crowded or overlapping.
+
+We have fixed these issues.  There are still some overlapping curves, but we now alternate line styles when such overlap occurs.
+
+> Summary - This is going to be a great paper, but it needs attention in several places to clean up errors and to be mindful of the wide variety of potential readers of the final work. Please use the detailed comments and annotations to improve the manuscript - that is their intent in being offered.
+> 
+> Data Editor's Review:
+> One of our data editors has reviewed your initial manuscript submission and has the following suggestion(s) to help improve the data, software citation and/or overall content. Please treat this as you would a reviewer's comments and respond accordingly in your report to the science editor. Questions can be sent directly to the data editors at data-editors@aas.org.
+> 
+> a) Per our software policy [1], we recommend that authors with living code in a GitHub repository place a "frozen" version on Zenodo (or other 3rd party repository that issues DOIs) [2,3] and then cite the deposited version in the article [4] and it in the reference list. Please pay close attention to the author list for the DOI deposit and that both the GitHub and DOI deposit have valid and consistent software licenses [5].
+> 
+> [1] https://journals.aas.org/news/policy-statement-on-software/
+> [2] https://github.com/AASJournals/Tutorials/tree/master/Repositories
+> [3] https://guides.github.com/activities/citable-code/
+> [4] https://journals.aas.org/aastexguide/#softwareandthirdparty
+> [5] https://choosealicense.com/
+
+We have created a release:  DOI: 10.5281/zenodo.8313307
+
+> b) It is great that the authors have minted a DOI for the MAST data used in their article. The next step is to include this DOI in the revised manuscript. Ideally, the authors should use the AASTeX "\dataset" command to mark up the DOI so it can be properly tagged in production. An example would be text similar to this:
+> 
+> "Some/all of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST) at the Space Telescope Science Institute. The specific observations analyzed can be accessed via \dataset[DOI]{https://doi.org/DOI}.
+
+We added this reference.
+
+> c) We now stream videos as animated figures in the HTML version of final articles. Please review our animation guidelines and upload the animation file with the next revision of the manuscript: https://journals.aas.org/graphics-guide/#animations. For the purposes of increased accessibility of the content we ask that the authors augment their captions for animated figures to include text describing the animation (including durations and annotations), the role of the animation relative to the inline figure, and/or provide a narrative context for readers that can't view the animation.
+
+We don't have any animations or videos, but we would like to provide alternate versions of Figure 1.  Specifically, we have a full-resolution PNG with embedded AVM.
+
+
+> d) Please include the version of the JWST Science Calibration Pipeline that you used in the text of your manuscript as well as the software citation corresponding to that version so that it appears in the reference list. After selecting the software version in the "Versions" panel on the Zenodo page (https://zenodo.org/record/8067394), citation exports can be found in the "Export" panel.
+
+We added the appropriate reference
+
+> e) Please add the citation for WebbPSF: 2015ascl.soft04007P
+
+Added.
+
+> 
+> 
+> 
+> * Anchored Note, page 2
+> The
+> 
+> * Anchored Note, page 2
+> Font error
+> 
+> * Highlight, page 2
+> tweakreg
+> 
+> * Anchored Note, page 2
+> Is ApJ OK with this?
+> 
+> It used to require “2022 August 28” style.
+> 
+> * Highlight, page 2
+> 2022-08-28
+> 
+> * Anchored Note, page 2
+> …in the Galactic Center region.
+> 
+> * Anchored Note, page 2
+> Generally, numbers less than ten are spelled out.
+> 
+> * Anchored Note, page 2
+> Here the tense is present, not past, even though the action (“streaking”) happened in the past.
+> 
+> * Highlight, page 2
+> 6
+> 
+> * Highlight, page 2
+> streaking is caused
+> 
+> * Anchored Note, page 2
+> Back to past tense 
+> 
+> * Highlight, page 2
+> performed
+> 
+> * Anchored Note, page 2
+> And back to present tense
+> 
+> * Highlight, page 2
+> is split
+> 
+> * Highlight, page 2
+> 6
+> 
+> * Highlight, page 2
+> 4
+> 
+> * Highlight, page 2
+> 2
+> 
+> * Anchored Note, page 2
+> Here, the past tense is used, and correctly.
+> 
+> Later in the text, the dominant tense becomes present tense, which is odd and not matched to this early text.
+> Please consider tense carefully.
+> 
+> * Highlight, page 2
+> downloaded
+> 
+> * Anchored Note, page 2
+> Past tense 
+> 
+> * Highlight, page 2
+> We found
+> 
+> * Anchored Note, page 3
+> Best to have directional indicators in or around the image.
+> 
+> * Freehand, page 3
+> * Anchored Note, page 3
+> The details of how this image was rendered from the data are nor provided in the text nor in this caption.
+> 
+> Is it an RGB product, or HSV, or 4-color?
+> Which images are displayed as which colors?
+> 
+> * Highlight, page 3
+> Figure 1.
+> 
+> * Anchored Note, page 3
+> What does this mean?
+> 
+> Were two color planes loaded with the same data, or is this an interpretive statement?
+> Unclear
+> 
+> * Highlight, page 3
+> blue-green)
+> 
+> * Text Note, page 3
+> shows
+> 
+> * Highlight, page 3
+> yellow)
+> 
+> * Strike Out, page 3
+> looks like
+> 
+> * Highlight, page 3
+> We then replace the flux measurements obtained for sat- urated stars with those from the saturated star catalog.
+> * Anchored Note, page 3
+> Wow! What?
+> 
+> Did you insert false data as fluxes for saturated stars?
+> That *is* what this text states.
+> Why not either deleted data values -or- lower confidence fluxes derived from the PSF wings alone?
+
+This sentence was included unintentionally and has been removed; the original intent was to fit the saturated stars' extended PSFs, then replace the zero'd pixels in the image with the fit values from the PSF.  We didn't end up doing this, though.
+We did perform PSF fitting on the saturated stars' extended PSFs, but we did not use the saturated stars for any analysis.
+We have now explained this in the text.
+
+
+
+> * Highlight, page 3
+> is likely that some intermediate-scale features (i.e., physical features comparable to 512 pixels across) are not re- covered by this procedure, which will need to be accounted for in analysis of the extended emission.
+> 
+> * Anchored Note, page 3
+> The absence of high frequency chopping is going to affect different spatial scales differently, unfortunately. Good of the authors to not step it under the rug.
+
+Yes, we worry about this.  It does not affect any of the results in this paper, but was a primary limiting factor in the analysis and is why we were unable to include the F187N filter (Paschen Alpha) in the full-field image.
+
+> * Anchored Note, page 3
+> Present tense 
+> 
+> * Anchored Note, page 3
+> Present tense 
+> 
+> * Highlight, page 3
+> We assemble
+> 
+> * Anchored Note, page 3
+> Past tense
+> 
+> * Highlight, page 3
+> we use
+> 
+> * Highlight, page 3
+> We used
+> 
+> * Highlight, page 3
+> with large tails at greater separation.
+> * Anchored Note, page 3
+> Won’t this cause worry in the minds of the readers?
+
+We have clarified this: the large tails are _probably_ from matches to false sources, but this doesn't affect any of our analysis because we exclude sources with large separations between catalogs.
+ 
+> * Anchored Note, page 3
+> Isn’t this just the RMS called out already?
+> 
+> Why introduce a new term (esp. w/o defining it)?
+
+This was unintentional; we now use RMS in the table and the text
+
+> * Highlight, page 3
+> offset noise s
+> 
+> * Anchored Note, page 4
+> Shouldn’t the 466N have a brighter 90% limit than the 410M?
+
+Yes, in principle.  We did not carefully examine the reason for the relative shallowness of F410M (it should be deeper than F405N by more than 0.1mag), since we limited our analysis later to stars brighter than 18.5, but likely the cause is confusion: F466N has greater absorption, and therefore less crowding.
+
+> * Freehand, page 4
+> * Highlight, page 4
+> extended PSFs.
+> * Anchored Note, page 4
+> Reflection nebulae?
+
+No, in this case (the highlight was on "extended PSFs") we are referring to the PSFs around extremely bright stars, which extend 100s of pixels away from the saturated center.
+
+> * Highlight, page 4
+> σm > 0.1, ‘quality factor’ qf spread > 0.25, or fracflux < 0.8.
+> * Anchored Note, page 4
+> Are all of these outputs from crowdsource?
+
+Yes, noted.
+
+> * Anchored Note, page 4
+> As noted in the caption annotations for this Figure, a description of how the color image was rendered from the data is required.
+
+The figure has been modified and text added describing the rendering.
+ 
+> * Highlight, page 4
+> Figure 1 shows the merged full-frame image.5
+> 
+> * Highlight, page 4
+> Figure 2 shows the Spitzer GLIMPSE (Churchwell et al. 2009) image of The Brick, which helped establish the cloud as an iconic dark cloud; the level of detail, and den- sity of stars, revealed by the JWST observations opens a new window into our Galaxy’s most extreme infrared dark cloud.
+> * Freehand, page 4
+> * Anchored Note, page 4
+> Hardly an adequate description of the Figure contents or its import to this present work.
+
+Based on suggestions in the main report, we have removed this figure and the minimal reference to it. Comparison to Spitzer belongs in a different paper.
+
+> * Anchored Note, page 4
+> Why are these shown in red?
+> 
+> Are they provisional or final?
+
+They were meant to be final, we just forgot to remove the \todo tag on submission.
+We made a small revision to more consistently exclude sources with mismatches between the catalogs, and that changed the numbers slightly.
+
+> * Highlight, page 4
+> 6
+> 
+> * Anchored Note, page 4
+> Not defined as an image name in the text or Figure caption.
+> 
+> * Text Note, page 4
+> B
+> 
+> * Highlight, page 4
+> nrca
+> 
+> * Text Note, page 4
+> A
+> 
+> * Freehand, page 4
+> * Freehand, page 4
+> * Highlight, page 4
+> How- ever, such images tend to have substantial residual features.
+> 
+> * Anchored Note, page 4
+> Any reference to support this assertion?
+
+The text was modified to explain that this is a feature of experiments we performed.
+
+> * Anchored Note, page 4
+> Present tense 
+> 
+> * Highlight, page 4
+> we take
+> 
+> * Anchored Note, page 4
+> are both
+> 
+> * Highlight, page 4
+> We then scale F405N by 0.1782, which is a factor empirically determined to best match star PSF peaks; the theoretical ratio of filter bandwidths is 0.103.
+> * Freehand, page 4
+> * Anchored Note, page 4
+> The scaling method difference is almost a factor of two.
+> It is hard to see why this can be ignored so easily.
+> Skeptical readers will be concerned.
+
+Indeed, this scaling was disconcerting and, it turns out, unnecessary.  We revisited the process and discovered an oversight in the continuum-only image production.  We have reproduced the images and revised the section describing the process.
+
+
+> * Anchored Note, page 4
+> This is a case where italics are needed so that quick reading doesn’t lead to confusion.
+> 
+> * Freehand, page 4
+> * Freehand, page 4
+> * Highlight, page 4
+> line-free
+> * Anchored Note, page 4
+> This does not make sense.
+> The F405N and F410M filters have *different* effective line-to-continuum ratios for stars, since the F410M is wider in bandpass but both see the same line fluxes. There is no single scaling of F405N that will remove lines from F410M without reducing stellar fluxes in the F410M corrected image.
+> The description needs to be much clearer.
+
+We added an explanation here.  The intent is indeed to produce a line-subtracted image, but one in which the stellar flux is reduced.  We describe this as a 'notch filter'.
+
+> 
+> * Anchored Note, page 4
+> …image, because the Br-alpha line is in both.
+> 
+> * Anchored Note, page 4
+> Italics
+> 
+> * Highlight, page 4
+> star-free
+> 
+> * Text Note, page 4
+> to be
+> 
+> * Freehand, page 4
+> * Anchored Note, page 4
+> …diagrams (CMDs) and…
+> 
+> * Highlight, page 4
+> as blueing.
+> * Anchored Note, page 4
+> This is a poor choice that conflates continuum dust properties with spectral features of both gas and dust. 
+
+We've removed blueing from the text
+
+> Simply put, it is NOT on par with reddening, which appears in virtually all colors.
+> As an historical aside, “bluing” (the correct spelling) involves putting an oxide coating on steel to prevent rust.
+>
+> * Text Note, page 4
+> * Anchored Note, page 4
+> (CCDs, e.g., Figure 4).
+> 
+> 
+> The CCD acronym needed definition in the text. This appears to be the first mention.
+
+ Done
+ 
+> * Anchored Note, page 4
+> Not so identified in the Figure
+> 
+> * Highlight, page 4
+> 4c
+> 
+> * Strike Out, page 4
+> color-
+> 
+> * Text Note, page 4
+> CCD
+> 
+> * Anchored Note, page 5
+> This is clearly here to support its presence in a press release, despite only incidentally being described or interpreted in the text.
+> 
+> OK, but at least add some astronomical directions and angular (or physical) scale indicators.
+
+Removed the figure
+ 
+> * Highlight, page 5
+> Figure 2. T
+> 
+> * Highlight, page 5
+> The F466N recombination lines also tend to blue
+> * Anchored Note, page 5
+> Confusing, as F466N has only one line.
+> 
+> This section is about recomb line *ratios* being bluer than normal.
+> Single lines can’t be blue unless they are in the blue part of the optical spectrum.
+
+This was clarified by retitling the section.
+ 
+> * Strike Out, page 5
+> color-color diagram
+> 
+> 
+> * Text Note, page 5
+> opposite
+> 
+> * Anchored Note, page 5
+> …with respect to normal reddening.
+> 
+> * Anchored Note, page 5
+> -based
+> 
+> * Strike Out, page 5
+> wrong
+> 
+> * Freehand, page 5
+> * Anchored Note, page 5
+> stars exhibiting the bluest colors
+> * Freehand, page 5
+> * Freehand, page 5
+> * Highlight, page 5
+> bluest stars
+> * Anchored Note, page 5
+> As this is the first time this nomenclature is used, a definition in a footnote is needed.
+
+We rephrase everywhere now
+ 
+> * Anchored Note, page 5
+> By convention, filters used to compute colors are listed as [shorter wavelength]-[longer wavelength].
+
+We have fixed this throughout.
+
+> * Freehand, page 5
+> * Anchored Note, page 5
+> …mag
+> 
+> * Anchored Note, page 5
+> Any concern about “cloud shine” from dust reflection of DGL?
+
+This is an interesting point, but it is not clear that we have detected extended emission from lines-of-sight to the cloud at all.  Cloudshine is just scattered light, so there is a question of whether we would see reflected recombination line emission or the general (continuum) interstellar radiation field.  In brief, though, this is unlikely to be a significant effect in an environment filled with ionized gas.  If there is any cloudshine, it will be more apparent in broadband images that will become available to the public on September 20.
+
+> * Text Note, page 5
+> show
+> 
+> * Freehand, page 5
+> * Strike Out, page 5
+> are
+> 
+> * Anchored Note, page 5
+> Why F187N and not F182M?
+
+This question is about what is now Figure 3.  We explain now that stars must be detected in all six filters to be displayed, and therefore removed the specific reference to F187M (though that is, at least in principle, our least-sensitive band at the highest extinction).
+
+> * Anchored Note, page 5
+> Not identified in the Figure
+> 
+> * Highlight, page 5
+> 4a
+> 
+> * Highlight, page 5
+> 4a
+> 
+> * Anchored Note, page 5
+> Figure has no such label
+> 
+> * Highlight, page 5
+> Figure 4b
+> 
+> * Anchored Note, page 6
+> Panel identifier (somewhere in the plot)
+> 
+> * Freehand, page 6
+> * Text Note, page 6
+> A
+> 
+> * Freehand, page 6
+> * Text Note, page 6
+> B
+> 
+> * Freehand, page 6
+> * Freehand, page 6
+> * Text Note, page 6
+> A
+> 
+> * Text Note, page 6
+> B
+> 
+> * Anchored Note, page 6
+> Invert this sentence for better clarity
+> 
+> * Text Note, page 6
+> lesser
+> 
+> * Freehand, page 6
+> * Highlight, page 6
+> ratio F466N/F405N
+> 
+> * Highlight, page 6
+> lower, higher,
+> 
+> * Text Note, page 6
+> greater
+> 
+> 
+> * Freehand, page 6
+> * Highlight, page 6
+> At higher extinc- tion, this ratio (F466N/F405N) is expected to rise.
+> * Anchored Note, page 6
+> No. Broadband extinction should not be used to predict or interpret narrow band or spectral features.
+> 
+> A more accurate statement would be that in the absence of spectral features, for greater extinction, the color [F410M]-[F466N] would be expected to increase (grow redder).
+
+Indeed, that is the intended meaning, and we have added text clarifying the point.
+
+> * Anchored Note, page 6
+> Choose a convention and stick with it. 
+> 
+> Don’t switch to flux ratios after extensive discussions of colors.
+
+We stick to colors now.
+
+> * Text Note, page 6
+> farther
+> 
+> * Highlight, page 6
+> F466N/F405N
+> 
+> * Highlight, page 6
+> further
+> 
+> * Anchored Note, page 6
+> “higher” is confusing to non-native English speakers, as color does not have a height property.
+> 
+> “more positive” or “greater” are clearer terms that avoid misunderstanding.
+
+This is a helpful suggestion we have adopted throughout.
+
+> * Anchored Note, page 6
+> Figure not so labeled
+> 
+> * Anchored Note, page 6
+> …more positive (redder) [F410M]-[F466N] colors,
+> 
+> * Anchored Note, page 6
+> …more negative (bluer) colors.
+> 
+> * Highlight, page 6
+> higher
+> 
+> * Highlight, page 6
+> F466N/F405N,
+> 
+> * Highlight, page 6
+> Figure 5b
+> 
+> * Freehand, page 6
+> * Highlight, page 6
+> lower,
+> 
+> * Anchored Note, page 6
+> …(bluer filter colors).
+> 
+> * Anchored Note, page 6
+> [F410M]-[F466N] colors behave as…
+> 
+> * Strike Out, page 6
+> ratio is t
+> 
+> * Highlight, page 6
+> ratio
+> 
+> * Text Note, page 6
+> * Anchored Note, page 6
+> greater than
+> 
+> * Anchored Note, page 6
+> …alone.
+> 
+> * Highlight, page 6
+> >
+> 
+> * Anchored Note, page 6
+> Less than
+> 
+> * Highlight, page 6
+> <
+> 
+> * Freehand, page 7
+> * Text Note, page 7
+> A
+> 
+> * Freehand, page 7
+> * Anchored Note, page 7
+> Are these stars detected in F187N?
+> 
+> * Freehand, page 7
+> * Anchored Note, page 7
+> Why F187N instead of the F182M used in the other panels?
+
+We explain now that this is to demonstrate consistency between F187N-F405N and F182M-F410M, which helps demonstrate that the observed blue colors in F466N-containing bands are not an artifact of a different filter.
+
+> * Freehand, page 7
+> * Anchored Note, page 7
+> CT06 did not compute extinctions for filters containing strong spectral features, so be careful about ascribing such.
+
+This is really the point: none of the dust extinction curves account for narrow spectral features (though many do account for broad silicate features).
+We have clarified this by emphasizing that these are dust-only extinction curves.
+
+As an aside, ices have often been ignored in the literature - they are much broader than spectral lines, especially ices other than CO, and therefore are more relevant to broadband photometry.  While ices have been detected spectroscopically for decades, there is little discussion of or evidence for ices photometrically, in large part because very few photometry missions (perhaps just Spitzer) had filters in the appropriate bands.  Considering your points on this figure, we have added text to the introduction to capture this point.
+
+> * Text Note, page 7
+> B
+> 
+> * Text Note, page 7
+> C
+> 
+> * Text Note, page 7
+> mag
+> 
+> * Text Note, page 7
+> mag
+> 
+> * Text Note, page 7
+> A panel,
+> 
+> * Freehand, page 7
+> * Anchored Note, page 7
+> Mag?
+> 
+> * Highlight, page 7
+> 6
+> 
+> * Text Note, page 7
+> B panel,
+> 
+> * Text Note, page 7
+> C panel,
+> 
+> * Freehand, page 7
+> * Freehand, page 7
+> * Freehand, page 7
+> * Freehand, page 7
+> * Highlight, page 7
+> [F410M]<18.5.
+> 
+> * Anchored Note, page 7
+> No. Curves don’t explain anything.
+> 
+> “ …runs parallel to the locus of observed points.”
+
+Rephrased.
+
+> * Anchored Note, page 7
+> …mag
+> 
+> * Freehand, page 7
+> * Freehand, page 7
+> * Anchored Note, page 7
+> What “it”?
+> 
+> Clarify which noun is being referred to.
+
+Rephrased
+ 
+> * Strike Out, page 7
+> nitude
+> 
+> * Highlight, page 7
+> explains the shape
+> 
+> * Anchored Note, page 7
+> Best to drop use of this flawed term.
+> 
+> “bluer colors” is more accurate and less fraught.
+
+Rephrased.
+ 
+> * Freehand, page 7
+> * Highlight, page 7
+> it does
+> 
+> * Highlight, page 7
+> blueing
+> 
+> * Text Note, page 7
+> in the
+> 
+> * Freehand, page 7
+> * Freehand, page 7
+> * Text Note, page 7
+> …in all panels.
+> 
+> * Freehand, page 7
+> * Anchored Note, page 7
+> Bad writing
+> 
+> * Freehand, page 7
+> * Anchored Note, page 7
+> Not identified in Figure
+> 
+> * Highlight, page 7
+> panel (a),
+> 
+> * Highlight, page 7
+> significantly affects the F410M filter
+> 
+> * Highlight, page 7
+> this figure
+> 
+> * Anchored Note, page 7
+> BAd writing
+> 
+> * Highlight, page 7
+> of the diffuse F466N,
+> 
+> * Text Note, page 7
+> What is the CO optical depth and does 13CO need to be taken into account?
+
+We have added 13CO gas to the figure and demonstrated that it is not important here.
+
+> * Text Note, page 8
+> Mixing emission and absorption lines will confuse. Better to use the Figure form shown in Appendix B.
+
+This remains a good point, but all we're trying to show with the emission lines is that their wavelengths do not overlap with CO lines.
+
+> * Anchored Note, page 8
+> Better to distinguish these.
+> 
+> Or, even better, put labels next to the relevant lines in the plot.
+
+We have added the labels directly to the plot.
+
+> * Anchored Note, page 8
+> Larger
+> 
+> * Freehand, page 8
+> * Freehand, page 8
+> * Anchored Note, page 8
+> Add panel designator letters
+> 
+> * Freehand, page 8
+> * Text Note, page 8
+> B.
+> 
+> * Anchored Note, page 8
+> Smaller
+> 
+> * Anchored Note, page 8
+> Curve plotted is tau for these conditions, not column depth.
+
+Fixed
+
+> * Text Note, page 8
+> A.
+> 
+> * Freehand, page 8
+> * Freehand, page 8
+> * Anchored Note, page 8
+> Scale up X 5 or so to aid visibility
+
+We increased the assumed column density for this purpose.
+ 
+> * Freehand, page 8
+> * Freehand, page 8
+> * Freehand, page 8
+> * Anchored Note, page 8
+> Tick marks normally appear inside plot boxes.  
+> 
+> * Anchored Note, page 8
+> Hard to see
+> 
+> * Freehand, page 8
+> * Text Note, page 8
+> s
+> 
+> * Freehand, page 8
+> * Text Note, page 8
+> A panel, 
+> 
+> * Text Note, page 8
+> B panel.
+> 
+> * Freehand, page 8
+> * Freehand, page 8
+> * Freehand, page 8
+> * Freehand, page 8
+> * Freehand, page 8
+> * Text Note, page 8
+> of the
+> 
+> 
+> * Freehand, page 8
+> * Highlight, page 8
+> The Pfβ line lays between the CO v=0-1 J=0-1 and J=1-2 transitions (∆v ≈ 200 − 300 km s−1), while Huε is close to the J=1-0 transition (∆v ≈ 100 km s−1). These lines would therefore would require very large broadening and/or doppler shift to overlap.
+> * Freehand, page 8
+> * Anchored Note, page 8
+> This sort of interpretation is best presented in the text.
+
+We have added an inset figure that is more directly linked to this text.
+
+> * Anchored Note, page 8
+> for wavebands less than
+> 
+> * Highlight, page 8
+> short of
+> 
+> * Anchored Note, page 8
+> mag
+> 
+> * Anchored Note, page 8
+> ..to our current sensitivity levels.
+> 
+> * Highlight, page 8
+> v=0-1 J=1-0 transition
+> * Anchored Note, page 8
+> Eh? 
+> 
+> Is this a typo, or dos it contain a typo?
+
+Yes, indeed, we had swapped the P- and R-branch labels.
+We have now adopted a clearer and more explicit convention: all lines are upper-lower, but connected by an arrow indicating the direction of state change - i.e., absorption is shown with a left-pointing arrow.
+
+> * Text Note, page 8
+> where
+> 
+> * Highlight, page 8
+> CMZ,
+> * Freehand, page 8
+> * Anchored Note, page 8
+> I don’t think the Central Molecular Zone has been called out to this point, so a acronym definition is needed, or the acronym can be replaced if this is the sole usage.
+
+Rephrased
+ 
+> * Text Note, page 8
+> a
+> 
+> * Text Note, page 8
+> favor
+> 
+> * Freehand, page 8
+> * Freehand, page 8
+> * Anchored Note, page 8
+> Per total CO column density
+> 
+> * Anchored Note, page 8
+> Is there a reference for this assertion?
+
+This question is about the volume density in the brick.  We have rephrased.  There is some evidence for lower-density gas containing CO, but it would take a lot of text to describe the conditions under which it was detected and is expected.  The point here is merely to acknowledge a possible limitation of the LTE modeling.
+
+> * Anchored Note, page 8
+> Or helping to offset?
+> 
+> Is there a real equivalence?
+
+This comment was about the subthermal excitation of lines.  We have clarified this a bit, but yes, lower density driving lower excitation temperature could result in stronger absorption within the observed window.
+
+> * Text Note, page 8
+> the temperature
+> 
+> * Highlight, page 8
+> balancing
+> 
+> * Anchored Note, page 8
+> …the blue [F410M]-[F466N] colors of…
+> 
+> * Freehand, page 8
+> * Anchored Note, page 8
+> But not to the highest H2 column depths probed here.
+> 
+> Why not?
+
+The models shown in Figure 6 do go to the highest plausible column densities and well beyond.  For a canonical CO/H2 = 10^-4, the modeled column densities go to N(H2)=10^24, which is above the maximum observed column density in the brick (5x10^23)
+
+> * Highlight, page 8
+> for blueing
+> 
+> * Strike Out, page 8
+> for blueing
+> 
+> * Text Note, page 8
+> those
+> 
+> * Freehand, page 8
+> * Strike Out, page 8
+> that
+> 
+> * Freehand, page 8
+> * Freehand, page 8
+> * Freehand, page 8
+> * Text Note, page 8
+> by
+> 
+> * Freehand, page 8
+> * Anchored Note, page 8
+> …in the F466N band.
+> 
+> * Anchored Note, page 9
+> The specific modeled conditions should appear in legends, not in the y-axis labels
+> 
+> * Freehand, page 9
+> * Freehand, page 9
+> * Freehand, page 9
+> * Freehand, page 9
+> * Text Note, page 9
+> B
+> 
+> * Text Note, page 9
+> C
+> 
+> * Text Note, page 9
+> A
+> 
+> * Anchored Note, page 9
+> These models don’t span up to the 80 mag Av called out in the text
+
+We have added a note about the effect of higher column density.  In brief, panel (b) captures the effect already.
+
+> * Highlight, page 9
+> Figure 6.
+> 
+> * Text Note, page 9
+> , A panel,
+> 
+> * Anchored Note, page 9
+> This seems quite low ~0.5 Av mag.
+
+This comment is about the models shown in the CO absorption modeling figure.  Indeed, that's correct: we adopted low column density to illustrate the effect of temperature on level population.  If we adopted a higher column density, all lines would be saturated.  The effect of that saturation is illustrated in the following figure.  Additionally, while the extreme end of column densities goes much higher, most of the stars are at more modest column density.
+
+> * Freehand, page 9
+> * Text Note, page 9
+> , C panel,
+> 
+> * Text Note, page 9
+> , B panel,
+> 
+> * Anchored Note, page 9
+> Also quite low
+> 
+> * Freehand, page 9
+> * Highlight, page 9
+> (N(H2) = 1021 cm−2).
+> 
+> * Freehand, page 9
+> * Highlight, page 9
+> (N(H2) = 1 × 1021 cm−2)
+> 
+> * Freehand, page 9
+> * Text Note, page 9
+> B
+> 
+> * Text Note, page 9
+> C
+> 
+> * Text Note, page 9
+> A
+> 
+> * Highlight, page 9
+> (left)
+> 
+> * Highlight, page 9
+> middle),
+> 
+> * Highlight, page 9
+> (right)
+> 
+> * Anchored Note, page 9
+> Colors alone are poor conveyors of information to those with color discrimination issues.
+
+Because the contours are sequential, the reader should not have to rely on color alone.  We have also made the line widths vary sequentially.
+
+> * Highlight, page 9
+> colors=[white,
+> 
+> * Strike Out, page 9
+> defi- ciencies.
+> 
+> * Text Note, page 9
+> deficits.
+> 
+> * Anchored Note, page 9
+> …also
+> 
+> * Text Note, page 9
+> * Anchored Note, page 9
+> Not yet introduced.
+> 
+> * Anchored Note, page 9
+> …mag
+> 
+> * Anchored Note, page 9
+>  per cm^2
+> 
+> * Highlight, page 9
+> Figure 10 is
+> 
+> * Text Note, page 9
+> F466N
+> 
+> * Freehand, page 9
+> * Freehand, page 9
+> * Text Note, page 9
+> stellar
+> 
+> * Anchored Note, page 10
+> Separating these allows removing the overlap of the tops of the curves.
+> 
+> Use the right y-axis for the transmission curves and scale so they don’t overlap the model curves at their high points.
+> 
+> * Freehand, page 10
+> * Text Note, page 10
+> total?
+> 
+> * Freehand, page 10
+> * Freehand, page 10
+> * Anchored Note, page 10
+> How can a single ratio constrain three abundances?
+
+We added text explaining that these are laboratory mixtures - they are not constrained.
+
+> * Text Note, page 10
+> A
+> 
+> * Anchored Note, page 10
+> More helpful discussion needed
+> 
+> * Highlight, page 10
+> CO mixed with OCS and CH4 in a 20:1 ratio
+> 
+> * Freehand, page 10
+> * Freehand, page 10
+> * Anchored Note, page 10
+> Legends shouldn’t cover curves
+> 
+> * Anchored Note, page 10
+> More discussion needed.
+> 
+> Note the switch from CO to CO2.
+> This needs a paragraph break to announce this new topic - even if the new paragraph consists of a sole sentence.
+
+We have rearranged this section and added text.
+
+> * Freehand, page 10
+> * Strike Out, page 10
+> nitudes
+> 
+> * Anchored Note, page 10
+> Same thickness lines makes this very hard to read.
+> 
+> Also color-only distinctions is hard for those with color issues
+> 
+> * Text Note, page 10
+> for
+> 
+> * Strike Out, page 10
+> and
+> 
+> * Text Note, page 10
+> than CO,
+> 
+> * Text Note, page 10
+> greatest
+> 
+> * Freehand, page 10
+> * Strike Out, page 10
+> a
+> 
+> * Freehand, page 10
+> * Strike Out, page 10
+> highest
+> 
+> * Anchored Note, page 10
+> Units missing
+> 
+> * Text Note, page 10
+> the
+> 
+> * Freehand, page 10
+> * Freehand, page 10
+> * Freehand, page 10
+> * Text Note, page 10
+> is
+> 
+> * Freehand, page 10
+> * Freehand, page 10
+> * Strike Out, page 10
+> That means that,
+> 
+> * Freehand, page 10
+> * Anchored Note, page 10
+> Three decimal digits not needed.
+> 
+> Even better to reduce to one to make the axis labeling look neater.
+
+We changed tick locations to allow for 1 decimal to be shown.
+
+> * Text Note, page 10
+> B
+> 
+> * Anchored Note, page 10
+> In the F466n filter
+> 
+> * Anchored Note, page 10
+> Easy to miss arrow. Consider increasing its height.
+> 
+> Legend symbol doesn’t match
+
+We improved the arrow and the legend symbol.
+
+> * Freehand, page 10
+> * Freehand, page 10
+> * Freehand, page 10
+> * Freehand, page 10
+> * Anchored Note, page 10
+> …for these admixtures.
+> 
+> * Anchored Note, page 10
+> Present tense…
+> 
+> * Freehand, page 10
+> * Highlight, page 10
+> We compare
+> 
+> * Text Note, page 10
+> ice
+> 
+> * Freehand, page 10
+> * Text Note, page 10
+> A: top
+> 
+> * Highlight, page 10
+> (left)
+> 
+> * Freehand, page 10
+> * Freehand, page 10
+> * Freehand, page 10
+> * Anchored Note, page 10
+> Not identified in Figure 
+> 
+> * Text Note, page 10
+> B: bottom
+> 
+> * Freehand, page 10
+> * Highlight, page 10
+> (right)
+> 
+> * Highlight, page 10
+> Figure 4c
+> 
+> * Text Note, page 10
+> with greater
+> 
+> * Highlight, page 10
+> bluer
+> 
+> * Strike Out, page 10
+> at higher
+> 
+> * Highlight, page 10
+> higher
+> 
+> * Freehand, page 10
+> * Freehand, page 10
+> * Freehand, page 10
+> * Anchored Note, page 10
+> greater than
+> 
+> * Highlight, page 10
+> >
+> 
+> * Text Note, page 10
+> …points reside…
+> 
+> * Freehand, page 10
+> * Text Note, page 10
+> curve
+> 
+> * Freehand, page 10
+> * Anchored Note, page 10
+> deficits
+> 
+> * Highlight, page 10
+> blueing.
+> 
+> * Anchored Note, page 10
+> Not called out in Figure
+> 
+> * Highlight, page 10
+> Figure 8a
+> 
+> * Freehand, page 11
+> * Anchored Note, page 11
+> Ice?
+> 
+> * Anchored Note, page 11
+> Typical data point uncertainties?
+
+We have selected only data with photometric error <0.1 mag; we now include a note in the caption on how this propagates into the plot values.
+
+> * Anchored Note, page 11
+> Points are too small, too faint
+
+Our intent in this plot is to show the density of points.  The outliers distract from this purpose
+
+> * Freehand, page 11
+> * Freehand, page 11
+> * Freehand, page 11
+> * Text Note, page 11
+> A
+> 
+> * Freehand, page 11
+> * Freehand, page 11
+> * Freehand, page 11
+> * Anchored Note, page 11
+> Better curve
+
+This note was on Figure 10.  We did not change the overplotted curve, electing instead to leave the simplest possible curve - a powerlaw - on the plot.  This curve is not a fit to the data.  We did not explore fitting the data in this work in part because of the enormous scatter at any given A_V.
+
+> * Text Note, page 11
+> [mag]
+> 
+> * Freehand, page 11
+> * Freehand, page 11
+> * Freehand, page 11
+> * Text Note, page 11
+> B
+> 
+> 
+> * Highlight, page 11
+> significantly
+> * Anchored Note, page 11
+> Estimated confidence range?
+
+We have rephrased this to indicate that the dominant systematic uncertainty is the choice of extinction curve
+
+> * Freehand, page 11
+> * Text Note, page 11
+> A: top
+> 
+> * Highlight, page 11
+> (left)
+> 
+> * Text Note, page 11
+> B: bottom
+> 
+> * Highlight, page 11
+> (right)
+> 
+> * Strike Out, page 11
+> nitudes
+> 
+> * Highlight, page 11
+> colder dust is present deep inside The Brick.
+> * Anchored Note, page 11
+> But your F466N absorption is seen in the cloud outskirts
+
+Yes, which means that the cloud outskirts most likely consist of CO mixed in with other molecules, not pure CO.
+We believe this point is already reasonably conveyed in the paragraph, but welcome further suggestions if the referee disagrees.
+
+> 
+> * Freehand, page 11
+> * Text Note, page 11
+> lies
+> 
+> * Freehand, page 11
+> * Text Note, page 11
+> greater
+> 
+> * Highlight, page 11
+> the gas-to-dust ratio is lower than 100
+> * Anchored Note, page 11
+> How, physically?
+> 
+> Increased dust production is limited by cosmic abundances 
+
+The metallicity in the Galactic center is higher, so it is plausible (even expected) that the dust-to-gas ratio should be higher.
+We added a note about this.
+
+> * Strike Out, page 11
+> higher
+> 
+> 
+> * Freehand, page 11
+> * Text Note, page 11
+> lesser
+> 
+> * Text Note, page 11
+> greater
+> 
+> * Strike Out, page 11
+> higher.
+> 
+> * Text Note, page 11
+> greater
+> 
+> * Strike Out, page 11
+> higher
+> 
+> * Text Note, page 11
+> greater
+> 
+> * Strike Out, page 11
+> higher
+> 
+> * Anchored Note, page 12
+> Variations as a function of what, exactly?
+
+Density or column density; now stated in the text.
+
+> * Anchored Note, page 12
+> an efficient coolant.
+> 
+> * Highlight, page 12
+> efficient.
+> 
+> * Highlight, page 12
+> variations in the cooling
+> 
+> * Freehand, page 12
+> * Freehand, page 12
+> * Text Note, page 12
+> JWST
+> 
+> * Highlight, page 12
+> a first empirical tool
+> * Freehand, page 12
+> * Anchored Note, page 12
+> Nope.
+> 
+> See Whittet et al (2013) and previous works.
+
+We did not intend to claim our results were the first relating A_V to N(CO); we have rephrased to clarify.
+
+> 
+> * Text Note, page 12
+> the F466N
+> 
+> * Freehand, page 12
+> * Freehand, page 12
+> * Anchored Note, page 12
+> against the diffuse line emission.
+> 
+> * Strike Out, page 12
+> from the Brα/Pfβ ratio.
+> 
+> * Text Note, page 15
+> near- infrared
+> 
+> * Freehand, page 15
+> * Freehand, page 15
+> * Anchored Note, page 15
+> here.
+> 
+> * Anchored Note, page 15
+> Which?
+> 
+> * Highlight, page 15
+> This
+> 
+> * Freehand, page 15
+> * Text Note, page 15
+> The greater
+> 
+> * Freehand, page 15
+> * Freehand, page 15
+> * Text Note, page 15
+> of the GN survey
+> 
+> * Anchored Note, page 15
+> Cure crowding
+> 
+> * Freehand, page 15
+> * Anchored Note, page 15
+> Another great astronomical inconsistency, but inescapable…
+> 
+> NIR colors are referred to in parens, much as (B - V), so…
+> (H - Ks), not [H]-[Ks]
+
+We have adopted the parentheses convention with much chagrin over notational inconsistencies.
+
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Highlight, page 15
+> blueing
+> 
+> * Strike Out, page 15
+> blueing
+> 
+> * Freehand, page 15
+> * Text Note, page 15
+> deficit
+> 
+> * Text Note, page 15
+> color
+> 
+> * Text Note, page 15
+> in our
+> 
+> * Text Note, page 15
+> s
+> 
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Freehand, page 15
+> * Anchored Note, page 16
+> Cure overlap
+> 
+> * Anchored Note, page 16
+> Cure overlap
+> 
+> * Freehand, page 16
+> * Freehand, page 16
+> * Anchored Note, page 16
+> Cure confusion
+
+If only one could...
+ 
+> * Freehand, page 16
+> * Freehand, page 16
+> * Anchored Note, page 16
+> Fix this
+> 
+> * Highlight, page 16
+> The F405N and F410M filter labels overlap.
+> 
+> * Freehand, page 16
+> * Freehand, page 16
+> * Text Note, page 16
+> Is there a “take-away” message the reader should note?
+
+Added.
